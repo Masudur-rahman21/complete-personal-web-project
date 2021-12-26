@@ -1,0 +1,38 @@
+.clock {
+  width: 600px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  z-index: 10;
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  border-left: 1px solid rgba(255, 255, 255, 0.02);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.02);
+  display: flex;
+  text-align: center;
+  font-family: 'Quicksand', 'Helvetica', Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+.inside {
+  position: absolute;
+  margin: auto;
+  width: 500px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  z-index: 10;
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  border-left: 1px solid rgba(255, 255, 255, 0.02);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.02);
+  display: flex;
+  text-align: left;
+}
+
+
+div p{
+  font-size: 100px;
+  color: rgba(0,0,0, 0.02);
+  color: rgba(red, green, blue, alpha);
+}
