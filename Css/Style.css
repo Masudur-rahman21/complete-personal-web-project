@@ -1,38 +1,127 @@
-.clock {
-  width: 600px;
-  height: 350px;
-  background: rgba(255, 255, 255, 0.05);
-  overflow: hidden;
-  z-index: 10;
-  backdrop-filter: blur(15px);
-  border-top: 1px solid rgba(255, 255, 255, 0.02);
-  border-left: 1px solid rgba(255, 255, 255, 0.02);
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.02);
-  display: flex;
-  text-align: center;
-  font-family: 'Quicksand', 'Helvetica', Arial, Helvetica, sans-serif;
-  font-weight: lighter;
+/*-- font family link --*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Raleway:ital,wght@0,400;0,600;1,300;1,500&family=Work+Sans:ital,wght@0,400;0,500;1,300&display=swap');
+
+/*------------
+global css
+---------------*/
+
+/*--- define custom css variable ---*/
+:root{
+  --bg-color-alpha-002: rgba(255, 255, 255, 0.2);
+  --bg-color-alpha-004: rgba(255, 255, 255, 0.4);
+  --bg-color-black-400: #262626;
+  --outer-shadow-f-500: 3px 3px 3px #808080, -3px -3px 3px black;
+}
+:not(i){
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
-.inside {
-  position: absolute;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  scroll-behavior: smooth;
+}
+::before,
+::after {
+  box-sizing: border-box;
+}
+body{
+  font-size: 16px;
+  overflow-x: hidden;
   margin: auto;
-  width: 500px;
-  height: 250px;
-  background: rgba(255, 255, 255, 0.05);
-  overflow: hidden;
-  z-index: 10;
-  backdrop-filter: blur(15px);
-  border-top: 1px solid rgba(255, 255, 255, 0.02);
-  border-left: 1px solid rgba(255, 255, 255, 0.02);
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.02);
-  display: flex;
-  text-align: left;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
 }
 
 
-div p{
-  font-size: 100px;
-  color: rgba(0,0,0, 0.02);
-  color: rgba(red, green, blue, alpha);
+/*--------------------------
+main div css
+----------------------------*/
+.main{
+  max-width: 100vw;
+}
+
+.home-section{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/Bg-image/Head/Head-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*filter: blur(8px);
+  -webkit-filter: blur(8px);
+  -ms-filter: blur(8px);*/
+  position: relative;
+  padding: 50px;
+  margin: auto;
+}
+
+#container{
+  position: relative;
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  border-radius: 30px;
+  background-color: var(--bg-color-alpha-002);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--bg-color-alpha-004);
+}
+
+
+/*------menu button css-----*/
+
+#container #menu-button{
+  position: absolute;
+  display: flex;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color-alpha-004);
+  border-radius: 40%;
+  box-shadow: var(--outer-shadow-f-500);
+}
+
+#container #menu-button span{
+  display: block;
+  position: relative;
+  width: 18px;
+  height: 2px;
+  background-color: var(--bg-color-black-400);
+}
+#container #menu-button span:before,
+#container #menu-button span:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color-black-400);
+}
+#container #menu-button span:before{
+  top: -6px;
+}
+#container #menu-button span:after{
+  top: 6px;
+}
+
+
+
+
+
+.div-text{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
 }
